@@ -1,0 +1,49 @@
+/* ====================== */
+/* General Styling */
+/* ====================== */
+
+body,
+html {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid:
+    "sidebar header" 1fr
+    "sidebar main-content" 4fr
+    / 1fr 4fr;
+
+  height: 100%;
+}
+
+/* ====================== */
+/* Header Styling */
+/* ====================== */
+
+.header {
+  background-color: red;
+  grid-area: header;
+}
+
+/* ====================== */
+/* Sidebar Styling */
+/* ====================== */
+
+.sidebar {
+  background-color: blue;
+  grid-area: sidebar;
+}
+
+/* ====================== */
+/* Main Content Styling */
+/* ====================== */
+
+.main-content {
+  background-color: green;
+  grid-area: main-content;
+}
+
+/* === Your Project Styling === */
+
+/* === Announcements Project Styling === */
