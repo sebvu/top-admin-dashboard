@@ -4,6 +4,22 @@
 
 :root {
   font-size: 16px;
+
+  /* body font size */
+  --text-base-size: 1rem;
+
+  /* type scale */
+  --text-scale-ratio: calc(1.2 + 1vmin);
+  --text-xs: calc(
+    (--text-base-size / var(--text-scale-ratio)) / var(--text-scale-ratio)
+  );
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(
+    var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
 }
 
 body,
@@ -19,6 +35,32 @@ html {
     / 1fr 4fr;
 
   height: 100%;
+}
+
+/* ====================== */
+/* Utilities Styling */
+/* ====================== */
+
+.--text-xs {
+  font-size: var(--text-xs);
+}
+.--text-sm {
+  font-size: var(--text-sm);
+}
+.--text-md {
+  font-size: var(--text-md);
+}
+.--text-lg {
+  font-size: var(--text-lg);
+}
+.--text-xl {
+  font-size: var(--text-xl);
+}
+.--text-xxl {
+  font-size: var(--text-xxl);
+}
+.--bold-font {
+  font-weight: bold;
 }
 
 /* ====================== */
