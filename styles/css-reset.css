@@ -75,3 +75,15 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/* === JESTER'S ADDITION === */
+/* Remove default styles for lists */
+li {
+  list-style-type: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
