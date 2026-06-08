@@ -7,11 +7,13 @@
 
   /* body font size */
   --text-base-size: 1rem;
+  --text-base-vmin: 0.5vmin;
 
   /* type scale */
-  --text-scale-ratio: calc(1.2 + 1vmin);
+  --text-scale-ratio: 1.2;
   --text-xs: calc(
-    (--text-base-size / var(--text-scale-ratio)) / var(--text-scale-ratio)
+    (var(--text-base-size) / var(--text-scale-ratio)) /
+      var(--text-scale-ratio) + var(--text-base-vmin)
   );
   --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
   --text-md: calc(
@@ -43,6 +45,7 @@ html {
 
 .--text-xs {
   font-size: var(--text-xs);
+  color: red;
 }
 .--text-sm {
   font-size: var(--text-sm);
