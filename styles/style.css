@@ -83,6 +83,10 @@ html {
 
 .icon {
   height: 100%;
+  width: 50px;
+
+  display: flex;
+  place-items: center;
 }
 
 /* === color providers === */
