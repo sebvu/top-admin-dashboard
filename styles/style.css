@@ -2,6 +2,24 @@
 /* General Styling */
 /* ====================== */
 
+@font-face {
+  font-family: "roboto";
+  src:
+    url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto_slab";
+  src:
+    url("assets/fonts/robotoslab-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/robotoslab-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   font-size: 16px;
 
@@ -40,10 +58,6 @@ html {
 }
 
 /* ====================== */
-/* Text Styling */
-/* ====================== */
-
-/* ====================== */
 /* Utilities Styling */
 /* ====================== */
 
@@ -75,24 +89,32 @@ html {
 
 /* === general utilities === */
 
-.--_access-height {
-  height: var(--_size);
-}
-
-.--_access-font-size {
-  font-size: var(--_size);
-}
-
-.--text-bold {
-  font-weight: bold;
-}
-
-.--inherit-font-size {
-  font-size: inherit;
-}
-
 .--icon {
   height: 100%;
+}
+
+/* ====================== */
+/* Text Styling */
+/* ====================== */
+
+._text {
+  font-family:
+    var(--_font-family), system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: var(--_size, 1rem);
+  font-weight: normal;
+}
+
+._text._text--header-font-family {
+  --_font-family: "roboto_slab";
+}
+
+._text._text--normal-font-family {
+  --_font-family: "roboto";
+}
+
+._text._text--bold {
+  font-weight: bold;
 }
 
 /* ====================== */
@@ -129,10 +151,12 @@ html {
   gap: 1.5rem;
 }
 
-.sidebar__item {
+._sidebar__item {
   display: flex;
   gap: 1rem;
   place-items: center start;
+
+  height: var(--_size);
 }
 
 /* ====================== */
