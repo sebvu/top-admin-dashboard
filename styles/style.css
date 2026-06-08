@@ -1,4 +1,4 @@
-/* ====================== */
+/* ======================*/
 /* General Styling */
 /* ====================== */
 
@@ -42,6 +42,26 @@
   --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
 }
 
+:root.dark {
+  --text-color: #f4f2fd;
+  --text-color-opposite: #04020d;
+  --background-color: #04020d;
+  --background-color-opposite: #f4f2fd;
+  --primary-color: #570467;
+  --secondary-color: #7e5610;
+  --accent-color: #6bb116;
+}
+
+:root.light {
+  --text-color: #04020d;
+  --text-color-opposite: #f4f2fd;
+  --background-color: #f4f2fd;
+  --background-color-opposite: #04020d;
+  --primary-color: #eb98fb;
+  --secondary-color: #efc681;
+  --accent-color: #a3e94e;
+}
+
 body,
 html {
   height: 100%;
@@ -58,8 +78,70 @@ html {
 }
 
 /* ====================== */
-/* Utilities Styling */
+/* Non-Hierarchial/Utilities Styling */
 /* ====================== */
+
+.icon {
+  height: 100%;
+}
+
+/* === color providers === */
+
+.--text-color[class*="icon"] {
+  fill: var(--text-color, #04020d);
+}
+
+.--text-color:not([class*="icon"]) {
+  color: var(--text-color, #04020d);
+}
+
+.--text-color-opposite[class*="icon"] {
+  fill: var(--text-color-opposite, #f4f2fd);
+}
+
+.--text-color-opposite:not([class*="icon"]) {
+  color: var(--text-color-opposite, #f4f2fd);
+}
+
+.--background-color[class*="icon"] {
+  fill: var(--background-color, #f4f2fd);
+}
+
+.--background-color:not([class*="icon"]) {
+  color: var(--background-color, #f4f2fd);
+}
+
+.--background-color-opposite[class*="icon"] {
+  fill: var(--background-color-opposite, #04020d);
+}
+
+.--background-color-opposite:not([class*="icon"]) {
+  color: var(--background-color-opposite, #04020d);
+}
+
+.--primary-color[class*="icon"] {
+  fill: var(--primary-color, #eb98fb);
+}
+
+.--primary-color:not([class*="icon"]) {
+  color: var(--primary-color, #eb98fb);
+}
+
+.--secondary-color[class*="icon"] {
+  fill: var(--secondary-color, #efc681);
+}
+
+.--secondary-color:not([class*="icon"]) {
+  color: var(--secondary-color, #efc681);
+}
+
+.--accent-color[class*="icon"] {
+  fill: var(--accent-color, #a3e94e);
+}
+
+.--accent-color:not([class*="icon"]) {
+  color: var(--accent-color, #a3e94e);
+}
 
 /* === context providers === */
 
@@ -85,12 +167,6 @@ html {
 
 .--size-context-xxl {
   --_size: var(--text-xxl);
-}
-
-/* === general utilities === */
-
-.--icon {
-  height: 100%;
 }
 
 /* ====================== */
@@ -138,7 +214,7 @@ html {
   gap: 5rem;
 
   padding: 1rem;
-  background-color: blue;
+  background-color: var(--primary-color);
 }
 
 .sidebar__container {
