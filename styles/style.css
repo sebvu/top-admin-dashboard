@@ -389,11 +389,16 @@ html {
 
 .main-content {
   grid-area: main-content;
+  display: grid;
+  grid:
+    "projects announcements" 1fr
+    "projects trending" 1fr
+    / 5fr 2fr;
   order: 1;
 
   background-color: var(--background-offset-color);
 }
 
-/* === Your Project Styling === */
+/* === Projects Styling === */
 
-/* === Announcements Project Styling === */
+/* === Aside Styling === */
