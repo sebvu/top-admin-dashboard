@@ -48,10 +48,12 @@
 
 :root.dark {
   --text-color: #f4f2fd;
-  --text-color-opposite: #04020d;
+  --text-opposite-color: #04020d;
   --background-color: #04020d;
+  --background-offset-color: #040306;
   --background-color-opposite: #f4f2fd;
   --primary-color: #570467;
+  --primary-offset-color: #42004f;
   --secondary-color: #7e5610;
   --accent-color: #6bb116;
 }
@@ -60,8 +62,10 @@
   --text-color: #04020d;
   --text-color-opposite: #f4f2fd;
   --background-color: #f4f2fd;
+  --background-offset-color: #d1cfda;
   --background-color-opposite: #04020d;
   --primary-color: #eb98fb;
+  --primary-offset-color: #cd7cdd;
   --secondary-color: #efc681;
   --accent-color: #a3e94e;
 }
