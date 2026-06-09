@@ -390,15 +390,25 @@ html {
 .main-content {
   grid-area: main-content;
   display: grid;
+  gap: 1rem;
   grid:
     "projects announcements" 1fr
     "projects trending" 1fr
     / 5fr 2fr;
   order: 1;
 
+  padding: 1rem;
   background-color: var(--background-offset-color);
 }
 
-/* === Projects Styling === */
+.projects {
+  grid-area: projects;
+}
 
-/* === Aside Styling === */
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
+}
