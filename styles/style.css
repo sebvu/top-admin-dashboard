@@ -223,30 +223,43 @@ html {
     / 1fr;
 
   background-color: red;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
 }
 
 .header-top {
   grid-area: header-top;
-  display: flex;
-
-  padding: 1rem 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid:
+    "header-top__left" 5fr
+    "header-top__right" 3fr
+    / 1fr;
 }
 
-.header-top__search-area {
+.header-top__left {
+  grid-area: header-top__left;
 }
 
-.header-top__profile-area {
+.header-top__right {
+  grid-area: header-top__right;
 }
 
 .header-bottom {
   grid-area: header-bottom;
+  display: grid;
+  grid-auto-flow: column;
+  grid:
+    "header-bottom__left" 1fr
+    "header-bottom__right" 1fr
+    / 1fr;
 }
 
-.header-bottom__profile-hello {
+.header-bottom__left {
+  grid-area: header-bottom__left;
 }
 
-.header-bottom__options {
+.header-bottom__right {
+  grid-area: header-bottom__right;
 }
 
 /* ====================== */
