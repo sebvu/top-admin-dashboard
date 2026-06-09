@@ -444,12 +444,12 @@ html {
   flex-direction: column;
 }
 
-.announcements__content {
-  flex: auto;
-}
-
 .announcements__title {
   flex: none;
+}
+
+.announcements__content {
+  flex: auto;
 }
 
 .trending {
