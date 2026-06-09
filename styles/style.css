@@ -434,8 +434,16 @@ html {
   flex: none;
 }
 
+.projects__content {
+  flex: auto;
+}
+
 .announcements {
   grid-area: announcements;
+}
+
+.announcements__content {
+  flex: auto;
 }
 
 .announcements__title {
@@ -448,4 +456,8 @@ html {
 
 .trending__title {
   flex: none;
+}
+
+.trending__content {
+  flex: auto;
 }
