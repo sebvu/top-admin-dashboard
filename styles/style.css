@@ -440,6 +440,8 @@ html {
 
 .announcements {
   grid-area: announcements;
+  display: flex;
+  flex-direction: column;
 }
 
 .announcements__content {
@@ -452,6 +454,8 @@ html {
 
 .trending {
   grid-area: trending;
+  display: flex;
+  flex-direction: column;
 }
 
 .trending__title {
