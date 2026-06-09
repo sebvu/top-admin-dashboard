@@ -27,8 +27,19 @@
   --text-base-size: 1rem;
   --text-base-vmin: 0.5vmin;
 
-  /* type scale */
+  /* type scale (this is so fucking scuffed lol) */
   --text-scale-ratio: 1.1;
+  --text-XS: calc(
+    var(--text-xsss) *
+      ((var(--text-scale-ratio) * 0.8) / var(--text-scale-ratio))
+  );
+  --text-xsss: calc(
+    var(--text-xss) *
+      ((var(--text-scale-ratio) * 0.8) / var(--text-scale-ratio))
+  );
+  --text-xss: calc(
+    var(--text-xs) * ((var(--text-scale-ratio) * 0.8) / var(--text-scale-ratio))
+  );
   --text-xs: calc(
     (var(--text-base-size) / var(--text-scale-ratio)) /
       var(--text-scale-ratio) + var(--text-base-vmin)
@@ -175,6 +186,18 @@ html {
 }
 
 /* === context providers === */
+
+.--size-context-XS {
+  --_size: var(--text-XS);
+}
+
+.--size-context-xsss {
+  --_size: var(--text-xsss);
+}
+
+.--size-context-xss {
+  --_size: var(--text-xss);
+}
 
 .--size-context-xs {
   --_size: var(--text-xs);
@@ -345,7 +368,7 @@ html {
   border: none;
   height: var(--size);
   width: calc(var(--size) * 2.3);
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 /* ====================== */
@@ -394,15 +417,21 @@ html {
   grid:
     "projects announcements" 1fr
     "projects trending" 1fr
-    / 5fr 2fr;
+    / 6fr 2fr;
   order: 1;
 
-  padding: 1rem;
+  padding: 4rem 2rem;
   background-color: var(--background-offset-color);
 }
 
 .projects {
   grid-area: projects;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__title {
+  flex: none;
 }
 
 .announcements {
