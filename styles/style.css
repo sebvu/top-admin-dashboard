@@ -49,7 +49,7 @@
   --text-color-opposite: #f4f2fd;
   --background-color: #f4f2fd;
   --background-offset-color: #d1cfda;
-  --background-color-opposite: #04020d;
+  --background-opposite-color: #04020d;
   --primary-color: #eb98fb;
   --primary-offset-color: #cd7cdd;
   --secondary-color: #efc681;
@@ -62,7 +62,7 @@
   --text-opposite-color: #04020d;
   --background-color: #04020d;
   --background-offset-color: #11071d;
-  --background-color-opposite: #f4f2fd;
+  --background-opposite-color: #f4f2fd;
   --primary-color: #570467;
   --primary-offset-color: #42004f;
   --secondary-color: #7e5610;
@@ -108,7 +108,7 @@ html {
 }
 
 ._profile-icon-container--shadow {
-  box-shadow: 0px 3px 3px 2px black;
+  box-shadow: 0px 3px 5px 3px black;
 }
 
 .profile-icon {
@@ -142,12 +142,12 @@ html {
   color: var(--background-color, #f4f2fd);
 }
 
-.--background-color-opposite[class*="icon"] {
-  fill: var(--background-color-opposite, #04020d);
+.--background-opposite-color[class*="icon"] {
+  fill: var(--background-opposite-color, #04020d);
 }
 
-.--background-color-opposite:not([class*="icon"]) {
-  color: var(--background-color-opposite, #04020d);
+.--background-opposite-color:not([class*="icon"]) {
+  color: var(--background-opposite-color, #04020d);
 }
 
 .--primary-color[class*="icon"] {
@@ -250,7 +250,9 @@ html {
     "header-top" 3fr
     "header-bottom" 5fr
     / 1fr;
+  order: 2;
 
+  box-shadow: 0px 10px 20px 20px var(--background-color);
   background-color: var(--background-color);
   padding: 1rem 4rem;
 }
@@ -357,6 +359,7 @@ html {
   justify-content: flex-start;
   flex-direction: column;
   gap: 5rem;
+  order: 3;
 
   padding: 1.5rem;
   background-color: var(--primary-color);
@@ -386,6 +389,8 @@ html {
 
 .main-content {
   grid-area: main-content;
+  order: 1;
+
   background-color: green;
 }
 
