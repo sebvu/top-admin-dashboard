@@ -61,7 +61,7 @@
   --text-color: #f4f2fd;
   --text-opposite-color: #04020d;
   --background-color: #04020d;
-  --background-offset-color: #040306;
+  --background-offset-color: #11071d;
   --background-color-opposite: #f4f2fd;
   --primary-color: #570467;
   --primary-offset-color: #42004f;
@@ -273,7 +273,6 @@ html {
 .search-area__icon {
   flex: none;
 }
-
 .search-area__search-box {
   flex: auto;
 
