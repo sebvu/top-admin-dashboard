@@ -229,37 +229,29 @@ html {
 .header-top {
   grid-area: header-top;
   display: grid;
-  grid-auto-flow: column;
-  grid:
-    "header-top__left" 5fr
-    "header-top__right" 3fr
-    / 1fr;
+  grid: "header-top__search-area header-top__profile" 1fr / 5fr 3fr;
 }
 
-.header-top__left {
-  grid-area: header-top__left;
+.header-top__search-area {
+  grid-area: header-top__search-area;
 }
 
-.header-top__right {
-  grid-area: header-top__right;
+.header-top__profile {
+  grid-area: header-top__profile;
 }
 
 .header-bottom {
   grid-area: header-bottom;
   display: grid;
-  grid-auto-flow: column;
-  grid:
-    "header-bottom__left" 1fr
-    "header-bottom__right" 1fr
-    / 1fr;
+  grid: "header-bottom__profile-hello header-bottom__options" 1fr / 1fr 1fr;
 }
 
-.header-bottom__left {
-  grid-area: header-bottom__left;
+.header-bottom__profile-hello {
+  grid-area: header-bottom__profile-hello;
 }
 
-.header-bottom__right {
-  grid-area: header-bottom__right;
+.header-bottom__options {
+  grid-area: header-bottom__options;
 }
 
 /* ====================== */
