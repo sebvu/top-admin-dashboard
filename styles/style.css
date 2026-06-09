@@ -252,7 +252,7 @@ html {
     / 1fr;
   order: 2;
 
-  box-shadow: 0px 10px 20px 20px var(--background-color);
+  box-shadow: 0px 10px 25px 20px var(--background-color);
   background-color: var(--background-color);
   padding: 1rem 4rem;
 }
