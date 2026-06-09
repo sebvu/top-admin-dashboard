@@ -424,14 +424,14 @@ html {
   background-color: var(--background-offset-color);
 }
 
-.projects {
-  grid-area: projects;
+.main-content__container {
   display: flex;
+  gap: 1rem;
   flex-direction: column;
 }
 
-.projects__title {
-  flex: none;
+.projects {
+  grid-area: projects;
 }
 
 .projects__content {
@@ -440,12 +440,6 @@ html {
 
 .announcements {
   grid-area: announcements;
-  display: flex;
-  flex-direction: column;
-}
-
-.announcements__title {
-  flex: none;
 }
 
 .announcements__content {
@@ -454,12 +448,6 @@ html {
 
 .trending {
   grid-area: trending;
-  display: flex;
-  flex-direction: column;
-}
-
-.trending__title {
-  flex: none;
 }
 
 .trending__content {
