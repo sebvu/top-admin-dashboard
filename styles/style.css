@@ -391,7 +391,7 @@ html {
   grid-area: main-content;
   order: 1;
 
-  background-color: green;
+  background-color: var(--background-offset-color);
 }
 
 /* === Your Project Styling === */
