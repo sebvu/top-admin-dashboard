@@ -226,32 +226,32 @@ html {
   padding: 1rem 2rem;
 }
 
-.header-top {
+.header__top {
   grid-area: header-top;
   display: grid;
-  grid: "header-top__search-area header-top__profile" 1fr / 5fr 3fr;
+  grid: "search-area profile" 1fr / 5fr 3fr;
 }
 
-.header-top__search-area {
-  grid-area: header-top__search-area;
+.search-area {
+  grid-area: search-area;
 }
 
-.header-top__profile {
-  grid-area: header-top__profile;
+.profile {
+  grid-area: profile;
 }
 
-.header-bottom {
+.header__bottom {
   grid-area: header-bottom;
   display: grid;
-  grid: "header-bottom__profile-hello header-bottom__options" 1fr / 1fr 1fr;
+  grid: "profile-hello options" 1fr / 1fr 1fr;
 }
 
-.header-bottom__profile-hello {
-  grid-area: header-bottom__profile-hello;
+.profile-hello {
+  grid-area: profile-hello;
 }
 
-.header-bottom__options {
-  grid-area: header-bottom__options;
+.options {
+  grid-area: options;
 }
 
 /* ====================== */
