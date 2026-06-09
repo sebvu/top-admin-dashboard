@@ -97,6 +97,12 @@ html {
   width: 60px;
 }
 
+._profile-icon-container {
+  border-radius: 50%;
+  width: var(--_size);
+  height: var(--_size);
+}
+
 /* === color providers === */
 
 .--text-color[class*="icon"] {
@@ -242,7 +248,8 @@ html {
   grid-area: search-area;
   display: flex;
   gap: 1rem;
-  place-items: center left;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .search-area__icon {
@@ -259,7 +266,12 @@ html {
 .profile {
   grid-area: profile;
   display: flex;
-  place-items: center right;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile__notification-icon {
+  flex: none;
 }
 
 .header__bottom {
@@ -271,13 +283,15 @@ html {
 .profile-hello {
   grid-area: profile-hello;
   display: flex;
-  place-items: center left;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .options {
   grid-area: options;
   display: flex;
-  place-items: center right;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* ====================== */
@@ -287,7 +301,8 @@ html {
 .sidebar {
   grid-area: sidebar;
   display: flex;
-  place-items: start start;
+  align-content: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   gap: 5rem;
 
@@ -307,7 +322,7 @@ html {
 
 ._sidebar__item {
   display: flex;
-  place-items: center start;
+  align-items: center start;
 
   height: var(--_size);
 }
