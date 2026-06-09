@@ -39,12 +39,11 @@
   );
   --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
   --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
-  --text-xxl: calc(
-    var(--text-xl) * var(--text-scale-ratio) * var(--text-scale-ratio)
-  );
-  --text-xxxl: calc(
-    var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio)
-  );
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio) * 1.2);
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio) * 1.3);
+
+  /* non-changing colors */
+  --search-bar-color: #d1cfda;
 }
 
 :root.dark {
@@ -88,14 +87,10 @@ html {
 
 .icon {
   height: 100%;
-  width: 60px;
-
-  display: flex;
-  place-items: center;
 }
 
-.icon--get-height {
-  height: var(--_size);
+.icon--add-width {
+  width: 60px;
 }
 
 /* === color providers === */
@@ -186,6 +181,12 @@ html {
   --_size: var(--text-xxxl);
 }
 
+/* === general utilities === */
+
+.--get-height {
+  height: var(--_size);
+}
+
 /* ====================== */
 /* Text Styling */
 /* ====================== */
@@ -217,12 +218,13 @@ html {
 .header {
   grid-area: header;
   display: grid;
+  /* gap: 1rem; */
   grid:
     "header-top" 3fr
     "header-bottom" 5fr
     / 1fr;
 
-  background-color: red;
+  background-color: var(--background-color);
   padding: 1rem 2rem;
 }
 
@@ -234,10 +236,26 @@ html {
 
 .search-area {
   grid-area: search-area;
+  display: flex;
+  gap: 1rem;
+  place-items: center left;
+}
+
+.search-area__icon {
+  flex: none;
+}
+
+.search-area__search-box {
+  flex: auto;
+
+  background-color: var(--search-bar-color);
+  border-radius: 1rem;
 }
 
 .profile {
   grid-area: profile;
+  display: flex;
+  place-items: center right;
 }
 
 .header__bottom {
@@ -248,10 +266,14 @@ html {
 
 .profile-hello {
   grid-area: profile-hello;
+  display: flex;
+  place-items: center left;
 }
 
 .options {
   grid-area: options;
+  display: flex;
+  place-items: center right;
 }
 
 /* ====================== */
