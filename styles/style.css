@@ -216,7 +216,22 @@ html {
 
 .header {
   grid-area: header;
+  display: grid;
+  grid:
+    "header-top" 3fr
+    "header-bottom" 5fr
+    / 1fr;
+
   background-color: red;
+}
+
+.header-top {
+  grid-area: header-top;
+  display: flex;
+}
+
+.header-bottom {
+  grid-area: header-bottom;
 }
 
 /* ====================== */
