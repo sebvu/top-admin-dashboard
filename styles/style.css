@@ -438,6 +438,14 @@ html {
   grid-area: announcements;
 }
 
+.announcements__title {
+  flex: none;
+}
+
 .trending {
   grid-area: trending;
+}
+
+.trending__title {
+  flex: none;
 }
