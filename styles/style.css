@@ -223,15 +223,30 @@ html {
     / 1fr;
 
   background-color: red;
+  padding: 1em 2em;
 }
 
 .header-top {
   grid-area: header-top;
   display: flex;
+
+  padding: 1rem 2rem;
+}
+
+.header-top__search-area {
+}
+
+.header-top__profile-area {
 }
 
 .header-bottom {
   grid-area: header-bottom;
+}
+
+.header-bottom__profile-hello {
+}
+
+.header-bottom__options {
 }
 
 /* ====================== */
