@@ -54,6 +54,10 @@
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio) * 1.4);
   --text-XL: calc(var(--text-xxxl) * var(--text-scale-ratio) * 1.6);
 
+  /* constant color palette */
+  --link-color: #eb98fb;
+  --link-color-visited: #cd7cdd;
+
   /* default light color palette */
   --search-bar-color: #d1cfda;
   --text-color: #04020d;
@@ -85,6 +89,14 @@
 body,
 html {
   height: 100%;
+}
+
+a:link {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--link-color-visited);
 }
 
 .container {
@@ -427,7 +439,7 @@ html {
   grid:
     "projects announcements" 1fr
     "projects trending" 1fr
-    / 6fr 2fr;
+    / 5fr 2fr;
   order: 1;
 
   padding: 4rem 2rem;
@@ -444,6 +456,13 @@ html {
   grid-area: projects;
 }
 
+.projects__content {
+  flex: auto;
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
 .projects__card {
   --shadow-color: var(--_shadow-color, var(--secondary-color));
 
@@ -452,21 +471,29 @@ html {
   gap: 1rem;
   flex-direction: column;
 
+  height: 220px;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  box-shadow: inset 1rem 0px 0px 0px var(--shadow-color);
+  box-shadow:
+    inset 1rem 0px 0px 0px var(--shadow-color),
+    0px 0px 8px var(--background-opposite-color);
 }
 
 .projects__card--important {
   --_shadow-color: var(--critical-color);
 }
 
-.project__card-- .projects__card-title {
+.projects__card-title {
   flex: none;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .projects__card-text {
   flex: auto;
+  overflow: auto;
 }
 
 .projects__card-icons {
@@ -475,13 +502,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: right;
-}
-
-.projects__content {
-  flex: auto;
-  display: grid;
-  grid: repeat(3, 1fr) / repeat(auto-fit, minmax(50px 1fr));
-  gap: 1rem;
 }
 
 .announcements {
