@@ -65,6 +65,7 @@
   --primary-offset-color: #cd7cdd;
   --secondary-color: #efc681;
   --accent-color: #a3e94e;
+  --critical-color: #ef8f81;
 }
 
 :root.dark {
@@ -78,6 +79,7 @@
   --primary-offset-color: #42004f;
   --secondary-color: #7e5610;
   --accent-color: #6bb116;
+  --critical-color: #7e1f10;
 }
 
 body,
@@ -183,6 +185,14 @@ html {
 
 .--accent-color:not([class*="icon"]) {
   color: var(--accent-color, #a3e94e);
+}
+
+.--critical-color[class*="icon"] {
+  fill: var(--critical-color, #ef8f81);
+}
+
+.--critical-color:not([class*="icon"]) {
+  color: var(--critical-color, #ef8f81);
 }
 
 /* === context providers === */
@@ -434,8 +444,44 @@ html {
   grid-area: projects;
 }
 
+.projects__card {
+  --shadow-color: var(--_shadow-color, var(--secondary-color));
+
+  background-color: var(--background-color);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: inset 1rem 0px 0px 0px var(--shadow-color);
+}
+
+.projects__card--important {
+  --_shadow-color: var(--critical-color);
+}
+
+.project__card-- .projects__card-title {
+  flex: none;
+}
+
+.projects__card-text {
+  flex: auto;
+}
+
+.projects__card-icons {
+  flex: none;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
 .projects__content {
   flex: auto;
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(auto-fit, minmax(50px 1fr));
+  gap: 1rem;
 }
 
 .announcements {
