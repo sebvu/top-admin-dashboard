@@ -435,7 +435,7 @@ a:visited {
 .main-content {
   grid-area: main-content;
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
   grid:
     "projects announcements" 1fr
     "projects trending" 1fr
@@ -512,6 +512,14 @@ a:visited {
 
 .announcements__content {
   flex: auto;
+
+  background-color: var(--background-color);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  border-radius: 1rem;
+  box-shadow: 0px 0px 8px var(--background-opposite-color);
 }
 
 .trending {
@@ -520,4 +528,12 @@ a:visited {
 
 .trending__content {
   flex: auto;
+
+  background-color: var(--background-color);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  border-radius: 1rem;
+  box-shadow: 0px 0px 8px var(--background-opposite-color);
 }
