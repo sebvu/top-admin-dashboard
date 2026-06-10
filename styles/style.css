@@ -518,6 +518,7 @@ a:visited {
   gap: 1rem;
   flex-direction: column;
 
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 8px var(--background-opposite-color);
 }
@@ -534,6 +535,7 @@ a:visited {
   gap: 1rem;
   flex-direction: column;
 
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 8px var(--background-opposite-color);
 }
