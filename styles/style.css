@@ -518,9 +518,29 @@ a:visited {
   gap: 1rem;
   flex-direction: column;
 
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 8px var(--background-opposite-color);
+}
+
+.content-entry {
+  flex: 1 0 auto;
+  padding: 0.3rem;
+  padding-bottom: 1rem;
+}
+
+.content-entry--bottom-line:not(:last-child) {
+  border-bottom: 3px solid var(--background-offset-color);
+}
+
+.content-entry__header {
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+}
+
+.content-entry__text {
+  text-overflow: ellipsis;
 }
 
 .trending {
