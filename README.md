@@ -10,3 +10,5 @@ A few methodologies;
 - BEM (block element modifier)
 
 this is pretty much practice but i'm happy with it
+
+Course credits go to [TOP](https://www.theodinproject.com/)
