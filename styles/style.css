@@ -565,7 +565,23 @@ a:visited {
   gap: 1rem;
   flex-direction: column;
 
-  padding: 1rem;
+  padding: 1.5rem 2rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 8px var(--background-opposite-color);
+}
+
+.trending-entry {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trending-entry__right-container {
+  flex: auto;
+  display: flex;
+
+  flex-direction: column;
+
 }
