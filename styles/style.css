@@ -473,6 +473,7 @@ a:visited {
   gap: 1rem;
   flex-direction: column;
 
+  height: 248px; /* this is very much a magic number */
   padding: 1rem 2rem;
   border-radius: 1rem;
   box-shadow:
