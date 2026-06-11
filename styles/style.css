@@ -57,6 +57,7 @@
   /* constant color palette */
   --link-color: #eb98fb;
   --link-color-visited: #cd7cdd;
+  --search-bar-text-color: #04020d;
 
   /* default light color palette */
   --search-bar-color: #d1cfda;
@@ -320,11 +321,20 @@ a:visited {
 .search-area__icon {
   flex: none;
 }
+
 .search-area__search-box {
   flex: auto;
+  display: flex;
+}
+
+.search-area__input {
+  flex: auto;
+  border: none;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  width: 50%;
 
   background-color: var(--search-bar-color);
-  border-radius: 1rem;
 }
 
 .profile {
