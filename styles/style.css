@@ -439,7 +439,7 @@ a:visited {
   grid:
     "projects announcements" 1fr
     "projects trending" 1fr
-    / 5fr 2fr;
+    / 5fr 400px;
   order: 1;
 
   height: 100%;
@@ -534,13 +534,20 @@ a:visited {
 }
 
 .content-entry__header {
-  /* overflow: hidden; */
-  /* white-space: nowrap; */
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .content-entry__text {
+  /* taken from  https://fantinel.dev/blog/text-overflow-multi-line/ */
+  /* for multi line ellipsis */
   text-overflow: ellipsis;
+  overflow: hidden;
+
+  display: -webkit-box; 
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .trending {
